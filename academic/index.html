@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online academic calculators for students. Calculate CGPA, predict negative marking scores, and manage your grades instantly.">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="index, follow">
+    <title>Academic & Grading Calculators – OmixCalculator</title>
+
+    <link rel="canonical" href="https://omixcalculator.in/academic/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='brandGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232563EB;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230F172A;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' width='64' height='64' rx='14' fill='url(%23brandGrad)' /%3E%3Cstyle%3E.key{fill:%23FFFFFF}.txt{font-family:system-ui,sans-serif;font-weight:900;font-size:10px;fill:%230F172A;text-anchor:middle;dominant-baseline:central}%3C/style%3E%3Crect class='key' x='13' y='13' width='18' height='18' rx='4' /%3E%3Ctext class='txt' x='22' y='22'%3EO%3C/text%3E%3Crect class='key' x='33' y='13' width='18' height='18' rx='4' /%3E%3Ctext class='txt' x='42' y='22'%3EM%3C/text%3E%3Crect class='key' x='13' y='33' width='18' height='18' rx='4' /%3E%3Ctext class='txt' x='22' y='42'%3EI%3C/text%3E%3Crect class='key' x='33' y='33' width='18' height='18' rx='4' /%3E%3Ctext class='txt' x='42' y='42'%3EX%3C/text%3E%3C/svg%3E">
+    
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://omixcalculator.in/academic#collection",
+  "url": "https://omixcalculator.in/academic",
+  "name": "Academic Calculators",
+  "description": "A collection of free academic calculators including CGPA and negative marking tools for students.",
+  "isPartOf": {
+    "@id": "https://omixcalculator.in/#website"
+  }
+}
+</script>
+
+
+    <script src="../global.js" defer></script>
+
+    <style>
+        /* CRITICAL PERFORMANCE CSS */
+        :root { --primary: #2563EB; --primary-dark: #1D4ED8; --navy: #0F172A; --accent: #0EA5A5; --col-math: #4F46E5; --col-finance: #059669; --col-health: #E11D48; --col-time: #D97706; --col-biz: #64748B; --bg-body: #ffffff; --bg-card: #ffffff; --text-main: #334155; --text-heading: #0F172A; --border: #E2E8F0; --container-width: 1100px; --nav-height: 70px; --space-md: 2rem; --space-lg: 5rem; --radius-lg: 12px; --shadow-subtle: 0 1px 3px rgba(0,0,0,0.05); --shadow-float: 0 10px 15px -3px rgba(0, 0, 0, 0.08); --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+        
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font-stack); background-color: var(--bg-body); color: var(--text-main); line-height: 1.6; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+        a { text-decoration: none; color: inherit; cursor: pointer; transition: all 0.2s ease; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
+
+        .container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; width: 100%; }
+        .section-wrapper { padding-top: var(--space-lg); padding-bottom: var(--space-lg); border-bottom: 1px solid var(--border); }
+        .section-wrapper:last-child { border-bottom: none; }
+        
+        h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; color: var(--text-heading); letter-spacing: -0.03em; line-height: 1.15; }
+        h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: var(--space-md); color: var(--text-heading); letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; }
+        .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; display: block; }
+        p { color: var(--text-main); font-size: 1.05rem; }
+
+        /* BREADCRUMBS */
+        .breadcrumbs { width: 100%; text-align: left; margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-main); font-weight: 500; padding-top: 0; }
+        .breadcrumbs a { color: var(--primary); opacity: 1; font-weight: 600; }
+        .breadcrumbs span { opacity: 0.6; margin: 0 6px; }
+        .breadcrumbs .current { color: var(--text-main); opacity: 0.8; }
+
+        /* HEADER */
+        header { background-color: rgba(255, 255, 255, 0.90); border-bottom: 1px solid var(--border); height: var(--nav-height); display: flex; align-items: center; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); will-change: transform; }
+        .header-inner { display: flex; align-items: center; width: 100%; }
+        
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo:focus { outline: none; }
+        .logo-mark { display: grid; grid-template-columns: 1fr 1fr; width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary) 0%, var(--navy) 100%); padding: 4px; gap: 2px; border-radius: 8px; flex-shrink: 0; box-shadow: none; }
+        .logo-mark span { background: white; color: var(--navy); font-size: 9px; font-weight: 900; display: flex; align-items: center; justify-content: center; border-radius: 2px; line-height: 1; }
+        .logo-text { display: flex; align-items: baseline; line-height: 1; }
+        .brand-name { font-weight: 800; font-size: 1.35rem; color: var(--primary); letter-spacing: -0.03em; }
+        .brand-suffix { font-weight: 600; font-size: 1.35rem; color: var(--navy); letter-spacing: -0.02em; }
+        
+        #mainNav { margin-left: auto; }
+        
+        .nav-actions { display: flex; align-items: center; gap: 1rem; }
+        nav ul { display: flex; gap: 0.5rem; list-style: none; }
+        nav a { font-weight: 600; font-size: 0.95rem; color: var(--navy); padding: 10px 16px; border-radius: 8px; }
+        nav a:hover, nav a.nav-active { color: var(--primary); background-color: #EFF6FF; }
+        
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 12px; z-index: 102; margin-right: -12px; }
+        .hamburger-line { display: block; width: 24px; height: 2px; background-color: var(--primary); margin: 5px 0; transition: all 0.3s ease; border-radius: 2px; }
+
+        /* HERO */
+        .hero { text-align: center; padding: 2px 0 5rem; border-bottom: 1px solid var(--border); background-color: #F8FAFC; background-image: radial-gradient(#CBD5E1 1px, transparent 1px); background-size: 24px 24px; display: flex; flex-direction: column; align-items: center; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 6px; background-color: #EFF6FF; color: #1e40af; font-size: 0.85rem; font-weight: 700; padding: 6px 14px; border-radius: 50px; border: 1px solid #BFDBFE; margin-bottom: 1.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .hero h1 { max-width: 800px; margin-left: auto; margin-right: auto; margin-bottom: 1rem; }
+        .hero-sub { max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.15rem; opacity: 0.9; }
+        .search-container { width: 100%; max-width: 580px; position: relative; margin: 0 auto; }
+        
+        /* SEARCH INPUT */
+        input[type="search"] { 
+            width: 100%; padding: 20px 28px; padding-right: 60px; padding-left: 60px;
+            font-size: 1.1rem; border: 1px solid var(--border); border-radius: 50px; outline: none; transition: all 0.2s ease; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); background-color: white; 
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E"); 
+            background-repeat: no-repeat; background-position: right 24px center; color: var(--navy); text-align: center;
+        }
+        input[type="search"]:focus { border-color: var(--primary); box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.1), 0 8px 10px -6px rgba(37, 99, 235, 0.1); transform: translateY(-2px); }
+        
+        /* TOOLS GRID */
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; list-style: none; }
+        .tool-card { contain: content; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; display: flex; flex-direction: column; align-items: flex-start; height: 100%; position: relative; overflow: hidden; transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; border-top: 4px solid var(--primary); }
+        .tool-card > * { position: relative; z-index: 2; }
+        .tool-card::before { content: attr(data-mark); position: absolute; right: -10px; bottom: -30px; font-size: 8rem; font-weight: 900; opacity: 0.04; color: currentColor; z-index: 1; font-family: sans-serif; transition: transform 0.4s ease; pointer-events: none; }
+        .tool-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px -8px rgba(37, 99, 235, 0.15), 0 4px 8px -4px rgba(0, 0, 0, 0.05); border-color: #BFDBFE; }
+        .tool-card:hover::before { transform: rotate(-10deg) scale(1.1); }
+        .tool-card::after { content: "Open Tool →"; position: absolute; bottom: 20px; right: 24px; font-size: 0.85rem; font-weight: 700; color: var(--primary); opacity: 0; transform: translateX(-10px); transition: all 0.2s ease; z-index: 3; }
+        .tool-card:hover::after { opacity: 1; transform: translateX(0); }
+        
+        @media (hover: none) {
+            .tool-card::after { opacity: 1; transform: translateX(0); bottom: 24px; }
+            .tool-card::before { transform: rotate(-5deg) scale(1.05); opacity: 0.06; }
+        }
+
+        /* Tool Colors */
+        .tool-card[data-type="math"] { border-top-color: var(--col-math); } .tool-card[data-type="math"]::before { color: var(--col-math); }
+        .tool-card[data-type="negative"] { border-top-color: var(--col-health); } .tool-card[data-type="negative"]::before { color: var(--col-health); }
+        .tool-card[data-type="negative"]:hover { box-shadow: 0 12px 24px -8px rgba(225, 29, 72, 0.15); border-color: #FECDD3; }
+
+        .card-title { font-size: 1.15rem; font-weight: 700; color: var(--text-heading); margin-bottom: 8px; margin-top: 4px; }
+        .card-desc { font-size: 0.95rem; opacity: 0.8; padding-bottom: 10px; }
+        
+        /* SEO Content */
+        .seo-text h2 { font-size: 1.75rem; margin-bottom: 1rem; color: var(--navy); }
+        .seo-text p { margin-bottom: 1.5rem; color: var(--text-main); line-height: 1.7; max-width: 800px; }
+        .feature-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .feature-box { background: #F8FAFC; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border); }
+        .feature-box h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--navy); }
+        .feature-box p { font-size: 0.95rem; opacity: 0.8; margin: 0; }
+
+        /* FOOTER */
+        footer { background-color: var(--navy); color: #F8FAFC; padding: 4rem 0 0; border-top: 1px solid #1E293B; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 4rem; padding-bottom: 4rem; }
+        .footer-brand .logo-text { font-size: 1.5rem; margin-bottom: 1.25rem; display: inline-block; }
+        .footer-brand .brand-name { color: #60A5FA; }
+        .footer-brand .brand-suffix { color: white; }
+        .footer-brand p { color: #94A3B8; font-size: 0.95rem; line-height: 1.6; max-width: 320px; }
+        .footer-col h3 { color: #E2E8F0; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.5rem; font-weight: 700; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0; }
+        .footer-col a { color: #CBD5E1; transition: color 0.2s, padding-left 0.2s; display: block; padding: 8px 0; }
+        .footer-col a:hover { color: white; padding-left: 4px; }
+        .footer-bottom { background-color: #020617; padding: 1.5rem 0; text-align: center; border-top: 1px solid #1E293B; color: #94A3B8; font-size: 0.85rem; }
+        .footer-bottom p { font-size: 0.85rem; margin: 0; color: inherit; }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .header-inner { justify-content: space-between; }
+            .mobile-menu-btn { display: block; }
+            nav { 
+                position: absolute; top: 100%; left: 0; right: 0; 
+                background: rgba(255, 255, 255, 0.98); 
+                border-bottom: 1px solid var(--border); 
+                padding: 1.5rem; opacity: 0; transform: translateY(-10px); visibility: hidden; 
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+                box-shadow: var(--shadow-float); 
+                backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); 
+                text-align: center; margin: 0;
+            }
+            nav.is-active { opacity: 1; transform: translateY(0); visibility: visible; }
+            nav ul { flex-direction: column; gap: 0.5rem; align-items: center; }
+            nav a { display: block; width: 100%; padding: 16px; font-size: 1.05rem; }
+            
+            .hero { padding: 2px 0 3rem; } /* Ensures 2px gap on mobile */
+            
+            h1 { font-size: 2rem; }
+            .tools-grid { grid-template-columns: 1fr; }
+            .section-wrapper { padding-top: 3rem; padding-bottom: 3rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
+            .footer-brand p { margin: 0 auto; }
+            .footer-brand .logo-text { justify-content: center; }
+            
+            /* ADDED: Fix for large logo text on mobile */
+            .brand-name, .brand-suffix { font-size: 1.15rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo" aria-label="OmixCalculator Home">
+                <div class="logo-mark" aria-hidden="true">
+                    <span>O</span><span>M</span><span>I</span><span>X</span>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">Omix</span><span class="brand-suffix">Calculator</span>
+                </div>
+            </a>
+            
+            <nav id="mainNav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="/#calculators">Calculators</a></li>
+                    <li><a href="/#generators">Generators</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="mobile-menu-btn" id="menuToggle" aria-label="Open Menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        
+        <section class="hero">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="/">Home</a> <span>/</span> <span class="current">Academic</span>
+                </div>
+
+                <div class="hero-badge">
+                    <span>🎓 Student Essentials</span>
+                </div>
+
+                <h1>Academic Calculators for CGPA, Exams & Grading</h1>
+                <p class="hero-sub">Calculate your CGPA, predict exam scores, and manage negative marking instantly. Simple tools for better grades.</p>
+                
+                <form class="search-container" role="search" onsubmit="event.preventDefault();">
+                    <label for="toolSearch" class="sr-only">Search for a tool</label>
+                    <input type="search" id="toolSearch" class="tool-search-input" placeholder="Search for grade tools..." name="q" autocomplete="off">
+                </form>
+            </div>
+        </section>
+
+        <section class="section-wrapper container">
+            <span class="section-label">All Tools</span>
+            <h2>Available Calculators</h2>
+            
+            <div class="tools-grid" id="academic-calcs">
+                
+                <a href="/coming-soon" class="tool-card" data-type="math" data-mark="A+">
+                    <div class="card-title">CGPA Calculator</div>
+                    <div class="card-desc">Convert your semester grades, percentage, or points into CGPA instantly.</div>
+                </a>
+
+                <a href="/academic/negative-marking-calculator/" class="tool-card" data-type="negative" data-mark="-0.25">
+                    <div class="card-title">Negative Marking Calculator</div>
+                    <div class="card-desc">Calculate your final exam score by deducting marks for wrong answers.</div>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="section-wrapper container">
+            <div class="seo-text">
+                <h2>Why use our Academic Tools?</h2>
+                <p>Academic success isn't just about studying harder—it's about planning smarter. OmixCalculator provides free, privacy-focused tools to help students and educators handle complex grading systems without the math headache.</p>
+                
+                <div class="feature-list">
+                    <div class="feature-box">
+                        <h3>⚡ Instant Results</h3>
+                        <p>No sign-ups or downloads. Just enter your marks and get your results immediately.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>🔒 100% Private</h3>
+                        <p>All calculations happen in your browser. Your grades never leave your device.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>📱 Mobile Ready</h3>
+                        <p>Optimized for phones so you can check your grades right after the exam.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            
+            <div class="footer-brand">
+                <div class="logo-text">
+                    <span class="brand-name">Omix</span><span class="brand-suffix">Calculator</span>
+                </div>
+                <p>Simple, fast, and privacy-focused online calculators and generators for everyday needs. No ads, no lag, just results.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Discover</h3>
+                <ul>
+                    <li><a href="/#calculators">Finance Calculators</a></li>
+                    <li><a href="/#calculators">Health Tools</a></li>
+                    <li><a href="/#calculators">Math & Algebra</a></li>
+                    <li><a href="/#generators">Generators</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/terms-conditions">Terms & conditions</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="copyright-year"></span> OmixCalculator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inline footer year update
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
