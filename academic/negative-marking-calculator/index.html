@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate your exam score with negative marking instantly. Supports NEET, JEE, UPSC, and other competitive exams.">
+    <meta name="theme-color" content="#ffffff">
+    <title>Negative Marking Calculator – OmixCalculator</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='brandGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232563EB;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230F172A;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' width='64' height='64' rx='14' fill='url(%23brandGrad)' /%3E%3Cstyle%3E.key{fill:%23FFFFFF}.txt{font-family:system-ui,sans-serif;font-weight:900;font-size:10px;fill:%230F172A;text-anchor:middle;dominant-baseline:central}%3C/style%3E%3Crect class='key' x='13' y='13' width='18' height='18' rx='4' /%3E%3Ctext class='txt' x='22' y='22'%3EO%3C/text%3E%3Crect class='key' x='33' y='13' width='18' height='18' rx='4' /%3E%3Ctext class='txt' x='42' y='22'%3EM%3C/text%3E%3Crect class='key' x='13' y='33' width='18' height='18' rx='4' /%3E%3Ctext class='txt' x='22' y='42'%3EI%3C/text%3E%3Crect class='key' x='33' y='33' width='18' height='18' rx='4' /%3E%3Ctext class='txt' x='42' y='42'%3EX%3C/text%3E%3C/svg%3E">
+    
+    <script src="../../global.js" defer></script>
+    <script src="tool.js" defer></script>
+
+    <style>
+        /* --- GLOBAL CSS (Matches Home) --- */
+        :root { --primary: #2563EB; --primary-dark: #1D4ED8; --navy: #0F172A; --accent: #0EA5A5; --col-math: #4F46E5; --col-finance: #059669; --col-health: #E11D48; --col-time: #D97706; --col-biz: #64748B; --bg-body: #ffffff; --bg-card: #ffffff; --text-main: #334155; --text-heading: #0F172A; --border: #E2E8F0; --container-width: 1100px; --nav-height: 70px; --space-md: 2rem; --space-lg: 5rem; --radius-lg: 12px; --shadow-subtle: 0 1px 3px rgba(0,0,0,0.05); --shadow-float: 0 10px 15px -3px rgba(0, 0, 0, 0.08); --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+        
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font-stack); background-color: var(--bg-body); color: var(--text-main); line-height: 1.6; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+        a { text-decoration: none; color: inherit; cursor: pointer; transition: all 0.2s ease; }
+        .container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; width: 100%; }
+        
+        /* HEADER STYLES */
+        header { background-color: rgba(255, 255, 255, 0.90); border-bottom: 1px solid var(--border); height: var(--nav-height); display: flex; align-items: center; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); will-change: transform; }
+        .header-inner { display: flex; align-items: center; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo:focus { outline: none; }
+        .logo-mark { display: grid; grid-template-columns: 1fr 1fr; width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary) 0%, var(--navy) 100%); padding: 4px; gap: 2px; border-radius: 8px; flex-shrink: 0; box-shadow: none; }
+        .logo-mark span { background: white; color: var(--navy); font-size: 9px; font-weight: 900; display: flex; align-items: center; justify-content: center; border-radius: 2px; line-height: 1; }
+        .logo-text { display: flex; align-items: baseline; line-height: 1; }
+        .brand-name { font-weight: 800; font-size: 1.35rem; color: var(--primary); letter-spacing: -0.03em; }
+        .brand-suffix { font-weight: 600; font-size: 1.35rem; color: var(--navy); letter-spacing: -0.02em; }
+        
+        #mainNav { margin-left: auto; }
+        .nav-actions { display: flex; align-items: center; gap: 1rem; }
+        nav ul { display: flex; gap: 0.5rem; list-style: none; }
+        nav a { font-weight: 600; font-size: 0.95rem; color: var(--navy); padding: 10px 16px; border-radius: 8px; }
+        nav a:hover, nav a.nav-active { color: var(--primary); background-color: #EFF6FF; }
+        
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 12px; z-index: 102; margin-right: -12px; }
+        .hamburger-line { display: block; width: 24px; height: 2px; background-color: var(--primary); margin: 5px 0; transition: all 0.3s ease; border-radius: 2px; }
+
+        /* --- TOOL PAGE SPECIFIC CSS --- */
+        
+        /* 1. Page Header - UPDATED GAP */
+        /* Changed padding-top from 2rem to 2px as requested */
+        .page-header { padding-top: 2px; padding-bottom: 1.5rem; }
+        
+        .breadcrumbs { width: 100%; text-align: left; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-main); font-weight: 500; }
+        .breadcrumbs a { color: var(--primary); opacity: 1; font-weight: 600; }
+        .breadcrumbs span { opacity: 0.6; margin: 0 6px; }
+        .breadcrumbs .current { color: var(--text-main); opacity: 0.8; }
+        
+        h1 { font-size: 2.25rem; font-weight: 800; color: var(--text-heading); margin-bottom: 0.5rem; line-height: 1.2; letter-spacing: -0.03em; }
+        .page-sub { font-size: 1.1rem; opacity: 0.8; max-width: 600px; line-height: 1.5; }
+
+        /* 2. The Sidebar Layout */
+        .tool-layout { display: grid; grid-template-columns: 380px 1fr; gap: 3rem; align-items: start; margin-bottom: 5rem; }
+
+        /* Left Column: The Sticky Tool Card */
+        .tool-wrapper { position: sticky; top: 100px; z-index: 10; }
+        .tool-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem; box-shadow: var(--shadow-float); border-top: 4px solid var(--primary); }
+        
+        .input-group { margin-bottom: 1.25rem; }
+        .input-label { display: block; font-weight: 700; font-size: 0.9rem; color: var(--navy); margin-bottom: 0.5rem; }
+        .input-field { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 1.1rem; font-weight: 500; transition: all 0.2s; outline: none; background: #fff; color: var(--text-main); }
+        .input-field:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
+
+        .row-group { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+        .calc-btn { width: 100%; background: var(--primary); color: white; border: none; padding: 14px; font-size: 1.1rem; font-weight: 700; border-radius: 8px; cursor: pointer; transition: background 0.2s; margin-top: 0.5rem; }
+        .calc-btn:hover { background: var(--primary-dark); }
+
+        /* Result Section (Hidden initially) */
+        #result-box { display: none; margin-top: 1.5rem; background-color: #EFF6FF; border: 1px solid #BFDBFE; border-radius: 8px; padding: 1.5rem; text-align: center; animation: slideDown 0.3s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .result-label { font-size: 0.85rem; text-transform: uppercase; font-weight: 700; color: var(--primary); letter-spacing: 0.05em; }
+        .result-value { font-size: 2.5rem; font-weight: 800; color: var(--navy); line-height: 1.2; margin: 0.5rem 0; }
+        
+        .result-details { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; border-top: 1px solid rgba(37, 99, 235, 0.2); padding-top: 1rem; font-size: 0.9rem; }
+        .detail-item span { font-weight: 700; display: block; }
+        .detail-item.good { color: #059669; }
+        .detail-item.bad { color: #E11D48; }
+
+        .reset-link { display: block; margin-top: 1rem; font-size: 0.85rem; color: #64748B; text-decoration: underline; cursor: pointer; background: none; border: none; width: 100%; }
+        .reset-link:hover { color: var(--navy); }
+
+        /* Right Column: Content Article */
+        .content-area h2 { font-size: 1.5rem; font-weight: 700; color: var(--navy); margin: 2rem 0 1rem; letter-spacing: -0.02em; }
+        .content-area h2:first-child { margin-top: 0; }
+        .content-area p { margin-bottom: 1rem; font-size: 1.05rem; line-height: 1.7; }
+        
+        .data-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+        .data-table th, .data-table td { padding: 12px; border: 1px solid var(--border); text-align: left; }
+        .data-table th { background-color: #F8FAFC; color: var(--navy); font-weight: 700; }
+        
+        /* FOOTER STYLES */
+        footer { background-color: var(--navy); color: #F8FAFC; padding: 4rem 0 0; border-top: 1px solid #1E293B; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 4rem; padding-bottom: 4rem; }
+        .footer-brand .logo-text { font-size: 1.5rem; margin-bottom: 1.25rem; display: inline-block; }
+        .footer-brand .brand-name { color: #60A5FA; } .footer-brand .brand-suffix { color: white; }
+        .footer-brand p { color: #94A3B8; font-size: 0.95rem; line-height: 1.6; max-width: 320px; }
+        .footer-col h3 { color: #E2E8F0; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.5rem; font-weight: 700; }
+        .footer-col ul { list-style: none; } .footer-col li { margin-bottom: 0; }
+        .footer-col a { color: #CBD5E1; transition: color 0.2s, padding-left 0.2s; display: block; padding: 8px 0; }
+        .footer-col a:hover { color: white; padding-left: 4px; }
+        .footer-bottom { background-color: #020617; padding: 1.5rem 0; text-align: center; border-top: 1px solid #1E293B; color: #94A3B8; font-size: 0.85rem; }
+        /* MOBILE OPTIMIZATIONS */
+        @media (max-width: 768px) {
+            .header-inner { justify-content: space-between; }
+            .mobile-menu-btn { display: block; }
+            
+            nav { 
+                position: absolute; top: 100%; left: 0; right: 0; 
+                background: rgba(255, 255, 255, 0.98); 
+                border-bottom: 1px solid var(--border); 
+                padding: 1.5rem; opacity: 0; transform: translateY(-10px); visibility: hidden; 
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+                box-shadow: var(--shadow-float); 
+                backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); 
+                text-align: center; margin: 0;
+            }
+            nav.is-active { opacity: 1; transform: translateY(0); visibility: visible; }
+            nav ul { flex-direction: column; gap: 0.5rem; align-items: center; }
+            nav a { display: block; width: 100%; padding: 16px; font-size: 1.05rem; }
+            
+            /* Logo Font Size Fix (Matches Home) */
+            .brand-name, .brand-suffix { font-size: 1.15rem; }
+
+            /* Tool Layout Mobile Stack */
+            .tool-layout { grid-template-columns: 1fr; gap: 3rem; }
+            .tool-wrapper { position: static; } /* Un-stick */
+            h1 { font-size: 1.75rem; }
+            
+            .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
+            .footer-brand p { margin: 0 auto; } .footer-brand .logo-text { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo" aria-label="OmixCalculator Home">
+                <div class="logo-mark" aria-hidden="true">
+                    <span>O</span><span>M</span><span>I</span><span>X</span>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">Omix</span><span class="brand-suffix">Calculator</span>
+                </div>
+            </a>
+            
+            <nav id="mainNav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#">Calculators</a></li>
+                    <li><a href="#">Generators</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="mobile-menu-btn" id="menuToggle" aria-label="Open Menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="page-header">
+            <div class="breadcrumbs">
+                <a href="/">Home</a> <span>/</span> <a href="/academic/">Academic</a> <span>/</span> <span class="current">Negative Marking</span>
+            </div>
+            <h1>Negative Marking Calculator</h1>
+            <p class="page-sub">Calculate your final exam score instantly with automatic error deduction.</p>
+        </div>
+
+        <div class="tool-layout">
+            
+            <div class="tool-wrapper">
+                <div class="tool-card">
+                    <form id="calcForm" onsubmit="event.preventDefault();">
+                        <div class="input-group">
+                            <label class="input-label" for="totalAttempted">Total Questions Attempted</label>
+                            <input type="number" id="totalAttempted" class="input-field" placeholder="e.g. 100" inputmode="numeric" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label class="input-label" for="wrongAnswers">Wrong Answers</label>
+                            <input type="number" id="wrongAnswers" class="input-field" placeholder="e.g. 15" inputmode="numeric" required>
+                        </div>
+
+                        <div class="row-group">
+                            <div class="input-group">
+                                <label class="input-label" for="marksCorrect">Marks (+)</label>
+                                <input type="number" id="marksCorrect" class="input-field" value="4" step="0.1">
+                            </div>
+                            <div class="input-group">
+                                <label class="input-label" for="marksWrong">Penalty (-)</label>
+                                <input type="number" id="marksWrong" class="input-field" value="1" step="0.1">
+                            </div>
+                        </div>
+
+                        <button type="submit" id="calculateBtn" class="calc-btn">Calculate Score</button>
+                    </form>
+
+                    <div id="result-box">
+                        <div class="result-label">Final Score</div>
+                        <div class="result-value" id="finalScore">0.00</div>
+                        
+                        <div class="result-details">
+                            <div class="detail-item good">
+                                <span id="correctCount">0</span> Correct
+                            </div>
+                            <div class="detail-item bad">
+                                <span id="wrongCount">0</span> Wrong
+                            </div>
+                            <div class="detail-item">
+                                <span id="accuracyVal">0%</span> Acc.
+                            </div>
+                        </div>
+
+                        <button id="resetBtn" class="reset-link">Reset Calculator</button>
+                    </div>
+                </div>
+            </div>
+
+            <article class="content-area">
+                <h2>How Negative Marking Works</h2>
+                <p>In competitive exams, negative marking is a system used to discourage guessing. For every wrong answer, a specific number of marks is deducted from your total score.</p>
+                <p>The standard formula used by this calculator is:</p>
+                <div style="background:#F1F5F9; padding:1rem; border-radius:8px; font-family:monospace; margin-bottom:1.5rem; border:1px solid #E2E8F0;">
+                    (Correct Answers × Marks per Question) - (Wrong Answers × Penalty)
+                </div>
+
+                <h2>Common Exam Patterns</h2>
+                <p>Here are the default marking schemes for popular exams in 2024-2025:</p>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Exam Name</th>
+                            <th>Correct (+)</th>
+                            <th>Wrong (-)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>NEET (UG)</strong></td>
+                            <td>+4</td>
+                            <td>-1</td>
+                        </tr>
+                        <tr>
+                            <td><strong>JEE Main</strong></td>
+                            <td>+4</td>
+                            <td>-1</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UPSC Prelims</strong></td>
+                            <td>+2</td>
+                            <td>-0.66</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SSC CGL</strong></td>
+                            <td>+2</td>
+                            <td>-0.50</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CAT</strong></td>
+                            <td>+3</td>
+                            <td>-1</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Tips to Reduce Negative Marks</h2>
+                <p>To improve your score, focus on accuracy rather than attempts. If you are unsure about an answer, it is often statistically better to skip the question unless you can eliminate at least two options.</p>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            
+            <div class="footer-brand">
+                <div class="logo-text">
+                    <span class="brand-name">Omix</span><span class="brand-suffix">Calculator</span>
+                </div>
+                <p>Simple, fast, and privacy-focused online calculators and generators for everyday needs. No ads, no lag, just results.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Discover</h3>
+                <ul>
+                    <li><a href="#">Finance Calculators</a></li>
+                    <li><a href="#">Health Tools</a></li>
+                    <li><a href="#">Math & Algebra</a></li>
+                    <li><a href="#">Generators</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/terms-conditions">Terms & conditions</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="copyright-year"></span> OmixCalculator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inline footer year update to avoid document.write blocking
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
