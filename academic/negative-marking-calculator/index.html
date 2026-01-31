@@ -3,109 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Calculate your exam score with negative marking instantly. Supports NEET, JEE, UPSC, and other competitive exams.">
     <meta name="theme-color" content="#ffffff">
-    <title>Negative Marking Calculator – OmixCalculator</title>
-    
+    <title>Negative Marking Calculator (1/3, 1/4, 0.25) – All Exams | OmixCalculator</title>
+    <meta name="description" content="Calculate your actual exam score instantly with our Negative Marking Calculator. Supports 1/3 (UPSC), 1/4 (SSC), & NEET marking schemes. fast & 100% accurate.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://omixcalculator.in/academic/negative-marking-calculator/">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     
+<meta property="og:type" content="website">
+<meta property="og:title" content="Negative Marking Calculator – 1/3, 1/4 & 0.25 for All Exams">
+<meta property="og:description" content="Instantly calculate exam scores with negative marking. Supports 1/3, 1/4 and 0.25 negative marking for competitive exams.">
+<meta property="og:url" content="https://omixcalculator.in/academic/negative-marking-calculator/">
+<meta property="og:site_name" content="OmixCalculator">
+
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Negative Marking Calculator",
+  "applicationCategory": "EducationalApplication",
+  "applicationSubCategory": "CalculatorApplication",
+  "featureList": "Calculate 1/3 negative marking, Calculate 1/4 negative marking, NEET score calculator",
+  "operatingSystem": "All",
+  "url": "https://omixcalculator.in/academic/negative-marking-calculator/",
+  "description": "A free online negative marking calculator to calculate exam scores using 1/3, 1/4 or 0.25 negative marking systems.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "OmixCalculator",
+    "url": "https://omixcalculator.in/"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Negative Marking Calculator",
+  "url": "https://omixcalculator.in/academic/negative-marking-calculator/",
+  "description": "Calculate exam scores with negative marking using 1/3, 1/4 and 0.25 rules.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "OmixCalculator",
+    "url": "https://omixcalculator.in/"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does 1/4 negative marking mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It means the penalty mark for each wrong answer will be 0.25 (one-fourth) of the mark assigned to each right answer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does 1/3 negative marking mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It means that for each wrong answer, penalty marks will be 0.33 (one third) of the marks awarded to each right answer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a 0.5 negative marking calculation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In this method, half (1/2) of the mark assigned to each right answer is deducted as penalty marks."
+      }
+    }
+  ]
+}
+</script>
+  
+   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://omixcalculator.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Academic",
+      "item": "https://omixcalculator.in/academic/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Negative Marking Calculator",
+      "item": "https://omixcalculator.in/academic/negative-marking-calculator/"
+    }
+  ]
+}
+</script>
+
     <script src="../../global.js" defer></script>
     <script src="tool.js" defer></script>
 
     <style>
-        /* --- GLOBAL CSS (Matches Home) --- */
+        /* --- GLOBAL CSS (Matches Home - UNTOUCHED) --- */
         :root { --primary: #2563EB; --primary-dark: #1D4ED8; --navy: #0F172A; --accent: #0EA5A5; --col-math: #4F46E5; --col-finance: #059669; --col-health: #E11D48; --col-time: #D97706; --col-biz: #64748B; --bg-body: #ffffff; --bg-card: #ffffff; --text-main: #334155; --text-heading: #0F172A; --border: #E2E8F0; --container-width: 1100px; --nav-height: 70px; --space-md: 2rem; --space-lg: 5rem; --radius-lg: 12px; --shadow-subtle: 0 1px 3px rgba(0,0,0,0.05); --shadow-float: 0 10px 15px -3px rgba(0, 0, 0, 0.08); --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
         
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         
-        /* FIXED: Added flex layout to fix floating footer */
         body { font-family: var(--font-stack); background-color: var(--bg-body); color: var(--text-main); line-height: 1.6; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; display: flex; flex-direction: column; min-height: 100vh; }
-        
-        /* FIXED: Main grows to push footer down */
         main { flex-grow: 1; }
-
-        /* FIXED: Ensure no underlines on links */
         a { text-decoration: none; color: inherit; cursor: pointer; transition: all 0.2s ease; }
         
         .container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; width: 100%; }
         
-        /* HEADER STYLES */
+        /* HEADER STYLES (UNTOUCHED) */
         header { background-color: rgba(255, 255, 255, 0.90); height: var(--nav-height); display: flex; align-items: center; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); will-change: transform; }
         .header-inner { display: flex; align-items: center; width: 100%; }
         .logo { display: flex; align-items: center; gap: 12px; }
         .logo:focus { outline: none; }
-        
-        /* FIXED: Cleaned up Logo CSS */
         .logo-mark { display: block; width: 36px; height: 36px; flex-shrink: 0; }
-        
         .logo-text { display: flex; align-items: baseline; line-height: 1; }
         .brand-name { font-weight: 800; font-size: 1.35rem; color: var(--primary); letter-spacing: -0.03em; }
         .brand-suffix { font-weight: 600; font-size: 1.35rem; color: var(--navy); letter-spacing: -0.02em; }
-        
         #mainNav { margin-left: auto; }
         .nav-actions { display: flex; align-items: center; gap: 1rem; }
         nav ul { display: flex; gap: 0.5rem; list-style: none; }
         nav a { font-weight: 600; font-size: 0.95rem; color: var(--navy); padding: 10px 16px; border-radius: 8px; }
         nav a:hover, nav a.nav-active { color: var(--primary); background-color: #EFF6FF; }
-        
         .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 12px; z-index: 102; margin-right: -12px; }
         .hamburger-line { display: block; width: 24px; height: 2px; background-color: var(--primary); margin: 5px 0; transition: all 0.3s ease; border-radius: 2px; }
 
         /* --- TOOL PAGE SPECIFIC CSS --- */
-        
-        /* 1. Page Header - UPDATED GAP */
         .page-header { padding-top: 2px; padding-bottom: 1.5rem; }
-        
         .breadcrumbs { width: 100%; text-align: left; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-main); font-weight: 500; }
         .breadcrumbs a { color: var(--primary); opacity: 1; font-weight: 600; }
         .breadcrumbs span { opacity: 0.6; margin: 0 6px; }
         .breadcrumbs .current { color: var(--text-main); opacity: 0.8; }
-        
         h1 { font-size: 2.25rem; font-weight: 800; color: var(--text-heading); margin-bottom: 0.5rem; line-height: 1.2; letter-spacing: -0.03em; }
         .page-sub { font-size: 1.1rem; opacity: 0.8; max-width: 600px; line-height: 1.5; }
 
-        /* 2. The Sidebar Layout */
+        /* Tool Layout (Removed Sticky) */
         .tool-layout { display: grid; grid-template-columns: 380px 1fr; gap: 3rem; align-items: start; margin-bottom: 5rem; }
-
-        /* Left Column: The Sticky Tool Card */
-        .tool-wrapper { position: sticky; top: 100px; z-index: 10; }
+        .tool-wrapper { position: static; }
         .tool-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem; box-shadow: var(--shadow-float); border-top: 4px solid var(--primary); }
         
+        /* Mode Toggle & Forms */
+        .mode-toggle { display: flex; background: #F1F5F9; padding: 4px; border-radius: 8px; margin-bottom: 1.5rem; }
+        .mode-btn { flex: 1; border: none; background: none; padding: 8px; font-size: 0.9rem; font-weight: 700; color: var(--text-main); border-radius: 6px; cursor: pointer; transition: all 0.2s; }
+        .mode-btn.active { background: white; color: var(--primary); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
         .input-group { margin-bottom: 1.25rem; }
         .input-label { display: block; font-weight: 700; font-size: 0.9rem; color: var(--navy); margin-bottom: 0.5rem; }
-        .input-field { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 1.1rem; font-weight: 500; transition: all 0.2s; outline: none; background: #fff; color: var(--text-main); }
+        .input-field { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 1.1rem; font-weight: 500; transition: all 0.2s; outline: none; background: #fff; color: var(--text-main); font-family: inherit; }
         .input-field:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
-
         .row-group { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-
         .calc-btn { width: 100%; background: var(--primary); color: white; border: none; padding: 14px; font-size: 1.1rem; font-weight: 700; border-radius: 8px; cursor: pointer; transition: background 0.2s; margin-top: 0.5rem; }
         .calc-btn:hover { background: var(--primary-dark); }
+        
+        /* Pro Mode Rows */
+        .subject-row { background: #F8FAFC; border: 1px solid var(--border); padding: 12px; border-radius: 8px; margin-bottom: 12px; position: relative; }
+        .subject-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+        .subject-title { font-size: 0.85rem; font-weight: 700; color: var(--primary); text-transform: uppercase; }
+        .remove-subject { background: none; border: none; color: #E11D48; font-size: 1.2rem; cursor: pointer; line-height: 1; padding: 0 4px; }
+        .subject-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+        .mini-input label { font-size: 0.75rem; font-weight: 600; color: var(--text-main); display: block; margin-bottom: 2px; }
+        .mini-input input { width: 100%; padding: 6px 8px; border: 1px solid #CBD5E1; border-radius: 4px; font-size: 0.95rem; font-family: inherit; }
+        .add-subject-btn { width: 100%; background: white; border: 1px dashed var(--primary); color: var(--primary); padding: 10px; border-radius: 8px; font-weight: 600; cursor: pointer; margin-bottom: 1rem; transition: all 0.2s; }
+        .add-subject-btn:hover { background: #EFF6FF; }
 
-        /* Result Section (Hidden initially) */
+        /* Result Box & Breakdown */
         #result-box { display: none; margin-top: 1.5rem; background-color: #EFF6FF; border: 1px solid #BFDBFE; border-radius: 8px; padding: 1.5rem; text-align: center; animation: slideDown 0.3s ease-out; }
         @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-
         .result-label { font-size: 0.85rem; text-transform: uppercase; font-weight: 700; color: var(--primary); letter-spacing: 0.05em; }
-        .result-value { font-size: 2.5rem; font-weight: 800; color: var(--navy); line-height: 1.2; margin: 0.5rem 0; }
-        
-        .result-details { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; border-top: 1px solid rgba(37, 99, 235, 0.2); padding-top: 1rem; font-size: 0.9rem; }
+        .result-value { font-size: 2.5rem; font-weight: 800; color: var(--navy); line-height: 1.2; margin: 0.5rem 0 1rem; }
+        .score-breakdown { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(37, 99, 235, 0.2); padding-bottom: 1rem; }
+        .breakdown-item { text-align: center; }
+        .breakdown-item .label { display: block; font-size: 0.8rem; font-weight: 600; opacity: 0.8; margin-bottom: 2px; }
+        .breakdown-item .value { display: block; font-size: 1.1rem; font-weight: 800; }
+        .breakdown-item.gained .value { color: #059669; }
+        .breakdown-item.lost .value { color: #E11D48; }
+        .result-details { display: flex; justify-content: center; gap: 1rem; font-size: 0.9rem; }
         .detail-item span { font-weight: 700; display: block; }
         .detail-item.good { color: #059669; }
         .detail-item.bad { color: #E11D48; }
-
+        .subject-breakdown-box { margin-top: 1.2rem; border-top: 1px solid rgba(37, 99, 235, 0.2); padding-top: 1rem; text-align: left; }
+        .sb-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--primary); margin-bottom: 0.5rem; display: block; letter-spacing: 0.05em; }
+        .perf-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 8px; border-radius: 4px; font-size: 0.9rem; margin-bottom: 4px; background-color: rgba(255, 255, 255, 0.5); }
+        .perf-row:nth-child(odd) { background-color: rgba(255, 255, 255, 0.8); }
+        .perf-name { font-weight: 600; color: var(--navy); }
+        .perf-stat { color: var(--text-main); }
+        .perf-acc { font-size: 0.8rem; opacity: 0.7; margin-left: 4px; }
         .reset-link { display: block; margin-top: 1rem; font-size: 0.85rem; color: #64748B; text-decoration: underline; cursor: pointer; background: none; border: none; width: 100%; }
-        .reset-link:hover { color: var(--navy); }
 
-        /* Right Column: Content Article */
-        .content-area h2 { font-size: 1.5rem; font-weight: 700; color: var(--navy); margin: 2rem 0 1rem; letter-spacing: -0.02em; }
+        /* --- ARTICLE & CONTENT STYLES --- */
+        .content-area { color: var(--text-main); }
+        .content-area h2 { font-size: 1.5rem; font-weight: 700; color: var(--navy); margin: 2rem 0 1rem; letter-spacing: -0.02em; scroll-margin-top: 100px; }
         .content-area h2:first-child { margin-top: 0; }
         .content-area p { margin-bottom: 1rem; font-size: 1.05rem; line-height: 1.7; }
+        .content-area ul, .content-area ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .content-area li { margin-bottom: 0.5rem; }
+        .content-area li strong { color: var(--navy); }
         
-        .data-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
-        .data-table th, .data-table td { padding: 12px; border: 1px solid var(--border); text-align: left; }
-        .data-table th { background-color: #F8FAFC; color: var(--navy); font-weight: 700; }
+        /* Box Styles */
+        .calc-box { padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.6; border: 1px solid #E2E8F0; position: relative; overflow: hidden; }
+        .formula-box { background: #EFF6FF; border-left: 5px solid var(--primary); }
+        .formula-box strong { color: var(--primary-dark); }
+        .example-box { background: #F0FDF4; border-left: 5px solid #10B981; }
+        .example-box strong { color: #047857; }
+        .box-header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; }
+        .formula-box .box-header { color: var(--primary); }
+        .example-box .box-header { color: #059669; }
+        .calc-line { font-family: 'Courier New', Courier, monospace; background: rgba(255,255,255,0.6); padding: 8px 12px; border-radius: 4px; margin-top: 8px; display: block; border: 1px solid rgba(0,0,0,0.05); }
         
-        /* FOOTER STYLES */
+        /* TOC */
+        .toc-box { background: #F8FAFC; border: 1px solid #E2E8F0; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; }
+        .toc-title { font-weight: 700; color: var(--navy); margin-bottom: 0.75rem; display: block; }
+        .toc-list { list-style: none; display: grid; gap: 0.5rem; }
+        .toc-list a { color: var(--primary); font-size: 0.95rem; text-decoration: none; border-bottom: 1px solid transparent; width: fit-content; transition: all 0.2s; font-weight: 500; }
+        .toc-list a:hover { color: var(--primary-dark); border-color: var(--primary); }
+
+        /* FAQ Grid Styles */
+        .faq-wrapper { margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .faq-item { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s, box-shadow 0.2s; }
+        .faq-item:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: var(--primary); }
+        .faq-item h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.75rem; line-height: 1.4; }
+        .faq-item p { font-size: 0.95rem; margin-bottom: 0; opacity: 0.85; line-height: 1.6; }
+
+        /* FOOTER (UNTOUCHED) */
         footer { background-color: var(--navy); color: #F8FAFC; padding: 4rem 0 0; border-top: 1px solid #1E293B; }
         .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 4rem; padding-bottom: 4rem; }
         .footer-brand .logo-text { font-size: 1.5rem; margin-bottom: 1.25rem; display: inline-block; }
@@ -116,35 +255,23 @@
         .footer-col a { color: #CBD5E1; transition: color 0.2s, padding-left 0.2s; display: block; padding: 8px 0; }
         .footer-col a:hover { color: white; padding-left: 4px; }
         .footer-bottom { background-color: #020617; padding: 1.5rem 0; text-align: center; border-top: 1px solid #1E293B; color: #94A3B8; font-size: 0.85rem; }
-        /* MOBILE OPTIMIZATIONS */
+
         @media (max-width: 768px) {
             .header-inner { justify-content: space-between; }
             .mobile-menu-btn { display: block; }
-            
-            nav { 
-                position: absolute; top: 100%; left: 0; right: 0; 
-                background: rgba(255, 255, 255, 0.98); 
-                border-bottom: 1px solid var(--border); 
-                padding: 1.5rem; opacity: 0; transform: translateY(-10px); visibility: hidden; 
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
-                box-shadow: var(--shadow-float); 
-                backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); 
-                text-align: center; margin: 0;
-            }
+            nav { position: absolute; top: 100%; left: 0; right: 0; background: rgba(255, 255, 255, 0.98); border-bottom: 1px solid var(--border); padding: 1.5rem; opacity: 0; transform: translateY(-10px); visibility: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: var(--shadow-float); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); text-align: center; margin: 0; }
             nav.is-active { opacity: 1; transform: translateY(0); visibility: visible; }
             nav ul { flex-direction: column; gap: 0.5rem; align-items: center; }
             nav a { display: block; width: 100%; padding: 16px; font-size: 1.05rem; }
-            
-            /* Logo Font Size Fix (Matches Home) */
             .brand-name, .brand-suffix { font-size: 1.15rem; }
-
-            /* Tool Layout Mobile Stack */
             .tool-layout { grid-template-columns: 1fr; gap: 3rem; }
-            .tool-wrapper { position: static; } /* Un-stick */
+            .tool-wrapper { position: static; }
             h1 { font-size: 1.75rem; }
-            
             .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
             .footer-brand p { margin: 0 auto; } .footer-brand .logo-text { justify-content: center; }
+            
+            /* FAQ Mobile: Stack them */
+            .faq-wrapper { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -190,46 +317,103 @@
         
         <div class="page-header">
             <div class="breadcrumbs">
-                <a href="/">Home</a> <span>/</span> <a href="/academic/">Academic</a> <span>/</span> <span class="current">Negative Marking</span>
+                <a href="/">Home</a> <span>/</span> <a href="/academic/">Academic</a> <span>/</span> <span class="current">Negative Marking Calculator</span>
             </div>
             <h1>Negative Marking Calculator</h1>
-            <p class="page-sub">Calculate your final exam score instantly with automatic error deduction.</p>
+            <p class="page-sub">Calculate the negative marking of all exams with our Negative Marking Calculator.</p>
         </div>
 
         <div class="tool-layout">
             
             <div class="tool-wrapper">
                 <div class="tool-card">
-                    <form id="calcForm" onsubmit="event.preventDefault();">
-                        <div class="input-group">
-                            <label class="input-label" for="totalAttempted">Total Questions Attempted</label>
-                            <input type="number" id="totalAttempted" class="input-field" placeholder="e.g. 100" inputmode="numeric" required>
-                        </div>
-                        
-                        <div class="input-group">
-                            <label class="input-label" for="wrongAnswers">Wrong Answers</label>
-                            <input type="number" id="wrongAnswers" class="input-field" placeholder="e.g. 15" inputmode="numeric" required>
-                        </div>
+                    <div class="mode-toggle">
+                        <button class="mode-btn active" id="btnSimpleMode" onclick="switchMode('simple')">Simple Mode</button>
+                        <button class="mode-btn" id="btnProMode" onclick="switchMode('pro')">Pro Mode (Subject Wise)</button>
+                    </div>
 
-                        <div class="row-group">
+                    <div id="simple-mode-container">
+                        <form id="calcForm" onsubmit="event.preventDefault(); calculateSimple();">
                             <div class="input-group">
-                                <label class="input-label" for="marksCorrect">Marks (+)</label>
-                                <input type="number" id="marksCorrect" class="input-field" value="4" step="0.1">
+                                <label class="input-label" for="totalAttempted">Total Questions Attempted</label>
+                                <input type="text" inputmode="decimal" id="totalAttempted" class="input-field" placeholder="e.g. 100" required>
                             </div>
+                            
                             <div class="input-group">
-                                <label class="input-label" for="marksWrong">Penalty (-)</label>
-                                <input type="number" id="marksWrong" class="input-field" value="1" step="0.1">
+                                <label class="input-label" for="wrongAnswers">Wrong Answers</label>
+                                <input type="text" inputmode="decimal" id="wrongAnswers" class="input-field" placeholder="e.g. 15" required>
                             </div>
-                        </div>
 
-                        <button type="submit" id="calculateBtn" class="calc-btn">Calculate Score</button>
-                    </form>
+                            <div class="row-group">
+                                <div class="input-group">
+                                    <label class="input-label" for="marksCorrect">Marks (+)</label>
+                                    <input type="text" inputmode="decimal" id="marksCorrect" class="input-field" value="4" placeholder="e.g. 1/3">
+                                </div>
+                                <div class="input-group">
+                                    <label class="input-label" for="marksWrong">Penalty (-)</label>
+                                    <input type="text" inputmode="decimal" id="marksWrong" class="input-field" value="1" placeholder="e.g. 0.33">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="calc-btn">Calculate Score</button>
+                        </form>
+                    </div>
+
+                    <div id="pro-mode-container" style="display: none;">
+                        <form id="proCalcForm" onsubmit="event.preventDefault(); calculatePro();">
+                            <div id="subject-list">
+                                <div class="subject-row">
+                                    <div class="subject-header">
+                                        <span class="subject-title">Subject 1</span>
+                                    </div>
+                                    <div class="subject-grid">
+                                        <div class="mini-input">
+                                            <label>Attempted</label>
+                                            <input type="text" inputmode="decimal" class="pro-attempted" required>
+                                        </div>
+                                        <div class="mini-input">
+                                            <label>Wrong</label>
+                                            <input type="text" inputmode="decimal" class="pro-wrong" required>
+                                        </div>
+                                        <div class="mini-input">
+                                            <label>Marks (+)</label>
+                                            <input type="text" inputmode="decimal" class="pro-marks" value="4">
+                                        </div>
+                                        <div class="mini-input">
+                                            <label>Penalty (-)</label>
+                                            <input type="text" inputmode="decimal" class="pro-penalty" value="1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" class="add-subject-btn" onclick="addSubject()">+ Add Another Subject</button>
+                            <button type="submit" class="calc-btn">Calculate Grand Total</button>
+                        </form>
+                    </div>
 
                     <div id="result-box">
                         <div class="result-label">Final Score</div>
                         <div class="result-value" id="finalScore">0.00</div>
                         
-                        <div class="result-details">
+                        <div class="score-breakdown">
+                            <div class="breakdown-item gained">
+                                <span class="label">(+) Awarded</span>
+                                <span class="value" id="scoreAwarded">0.00</span>
+                            </div>
+                            <div class="breakdown-item lost">
+                                <span class="label">(-) Deducted</span>
+                                <span class="value" id="scoreDeducted">0.00</span>
+                            </div>
+                        </div>
+
+                        <div id="subject-breakdown-container" class="subject-breakdown-box" style="display: none;">
+                            <span class="sb-title">Subject Performance</span>
+                            <div id="subject-breakdown-list">
+                                </div>
+                        </div>
+
+                        <div class="result-details" style="margin-top: 1rem;">
                             <div class="detail-item good">
                                 <span id="correctCount">0</span> Correct
                             </div>
@@ -241,61 +425,199 @@
                             </div>
                         </div>
 
-                        <button id="resetBtn" class="reset-link">Reset Calculator</button>
+                        <button id="resetBtn" class="reset-link" onclick="resetAll()">Reset Calculator</button>
                     </div>
                 </div>
             </div>
 
             <article class="content-area">
-                <h2>How Negative Marking Works</h2>
-                <p>In competitive exams, negative marking is a system used to discourage guessing. For every wrong answer, a specific number of marks is deducted from your total score.</p>
-                <p>The standard formula used by this calculator is:</p>
-                <div style="background:#F1F5F9; padding:1rem; border-radius:8px; font-family:monospace; margin-bottom:1.5rem; border:1px solid #E2E8F0;">
-                    (Correct Answers × Marks per Question) - (Wrong Answers × Penalty)
+                
+                <div class="toc-box">
+                    <span class="toc-title">Table of Contents</span>
+                    <ul class="toc-list">
+                        <li><a href="#what-is-negative">What is Negative Marking?</a></li>
+                        <li><a href="#how-to-calculate">How to Calculate Negative Marking</a></li>
+                        <li><a href="#understanding-types">Understanding Various Types</a></li>
+                        <li><a href="#one-third-calc">1/3 Negative Marking Calculator</a></li>
+                        <li><a href="#one-fourth-calc">1/4 Negative Marking Calculator</a></li>
+                        <li><a href="#point-two-five">0.25 Negative Marking Calculator</a></li>
+                        <li><a href="#neet-calc">How to Calculate NEET Marks</a></li>
+                        <li><a href="#upsc-calc">UPSC Negative Marking Calculation</a></li>
+                        <li><a href="#how-to-use">How to Use Our Calculator</a></li>
+                        <li><a href="#why-use">Why Use Our Calculator?</a></li>
+                        <li><a href="#faqs">FAQs</a></li>
+                        <li><a href="#reduce-negative">How to Reduce Negative Marking</a></li>
+                        <li><a href="#conclusion">Conclusion</a></li>
+                    </ul>
                 </div>
 
-                <h2>Common Exam Patterns</h2>
-                <p>Here are the default marking schemes for popular exams in 2024-2025:</p>
-                
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Exam Name</th>
-                            <th>Correct (+)</th>
-                            <th>Wrong (-)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>NEET (UG)</strong></td>
-                            <td>+4</td>
-                            <td>-1</td>
-                        </tr>
-                        <tr>
-                            <td><strong>JEE Main</strong></td>
-                            <td>+4</td>
-                            <td>-1</td>
-                        </tr>
-                        <tr>
-                            <td><strong>UPSC Prelims</strong></td>
-                            <td>+2</td>
-                            <td>-0.66</td>
-                        </tr>
-                        <tr>
-                            <td><strong>SSC CGL</strong></td>
-                            <td>+2</td>
-                            <td>-0.50</td>
-                        </tr>
-                        <tr>
-                            <td><strong>CAT</strong></td>
-                            <td>+3</td>
-                            <td>-1</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <p>Almost everyone in life appears for a competitive exam at least once. If you are currently in that phase, you know how important it is to calculate negative marking for your exams.</p>
 
-                <h2>Tips to Reduce Negative Marks</h2>
-                <p>To improve your score, focus on accuracy rather than attempts. If you are unsure about an answer, it is often statistically better to skip the question unless you can eliminate at least two options.</p>
+                <p>Whether you are searching for how to calculate negative marking for NEET, JEE, Banking, SSC or UPSC, our negative marking calculator is for you.</p>
+
+                <h2 id="what-is-negative">What is Negative Marking?</h2>
+                <p>Negative marking is a method used in almost all competitive exams to discourage random guessing. In this system, a certain percentage of your total marks is deducted based on the questions you have marked incorrectly.</p>
+                
+                <div class="calc-box example-box">
+                    <div class="box-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"></path></svg>
+                        Example
+                    </div>
+                    <p>In a competitive exam, let’s say 2 marks are awarded for each right answer, and 1 mark is deducted for each wrong answer.</p>
+                    <div class="calc-line">For 10 correct answers = +20 marks</div>
+                    <div class="calc-line">For 5 wrong answers = −5 marks</div>
+                    <div class="calc-line"><strong>Total Score = 15 marks</strong></div>
+                </div>
+
+                <h2 id="how-to-calculate">How to Calculate Negative Marking</h2>
+                <p>Negative marking is calculated through a universal formula.</p>
+                
+                <div class="calc-box formula-box">
+                    <div class="box-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="12" y1="6" x2="12.01" y2="6"/><line x1="16" y1="6" x2="16.01" y2="6"/><line x1="8" y1="6" x2="8.01" y2="6"/><line x1="12" y1="10" x2="12.01" y2="10"/><line x1="16" y1="10" x2="16.01" y2="10"/><line x1="8" y1="10" x2="8.01" y2="10"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="14" x2="8.01" y2="14"/></svg>
+                        Formula
+                    </div>
+                    <div class="calc-line">Total Score = (Total Correct × Marks per Question) − (Total Wrong × Penalty Value)</div>
+                    
+                    <p style="margin-top:12px"><strong>Formula Breakdown:</strong><br>
+                    Total Correct: Questions you attempted correctly<br>
+                    Marks per Question: Marks awarded to each correct answer<br>
+                    Total Wrong: Questions you attempted incorrectly<br>
+                    Penalty Value: Marks deducted for each wrong answer<br>
+                    Total Score: Final score after negative marking</p>
+                </div>
+
+                <p>Our marks calculator with negative marking uses this formula. If you don’t want to perform manual calculations, you can use the calculator for accurate results.</p>
+
+                <h2 id="understanding-types">Understanding Various Types of Negative Marking</h2>
+                <p>Negative marking varies from one exam to another. For example, NEET negative marking is different from UPSC. Similarly, SSC GD negative marking is different from SSC CGL.</p>
+
+                <h2 id="one-third-calc">1/3 Negative Marking Calculator</h2>
+                <p>The 1/3 negative marking system is commonly used in UPSC exams. When you input 1/3 (0.33), the calculator uses the following logic:</p>
+                <ul>
+                    <li>Correct Answer: +2 marks</li>
+                    <li>Wrong Answer: −0.66 marks</li>
+                </ul>
+
+                <div class="calc-box example-box">
+                    <div class="box-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"></path></svg>
+                        Scenario
+                    </div>
+                    <p>Correct Answers: 80<br>
+                    Wrong Answers: 20</p>
+                    
+                    <p><strong>Calculation:</strong></p>
+                    <div class="calc-line">(80 × 2) − (20 × 0.66)</div>
+                    <div class="calc-line">= 160 − 13.2</div>
+                    <div class="calc-line"><strong>= 146.8 marks</strong></div>
+                </div>
+
+                <h2 id="one-fourth-calc">1/4 Negative Marking Calculator</h2>
+                <p>The 1/4 negative marking system is used in exams like SSC and Banking. If you calculate using 1/4 (0.25), our calculator uses this logic to calculate your score.</p>
+                <ul>
+                    <li>Correct Answer: +1 mark</li>
+                    <li>Wrong Answer: −0.25 marks</li>
+                </ul>
+
+                <div class="calc-box example-box">
+                    <div class="box-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"></path></svg>
+                        Scenario
+                    </div>
+                    <p>Correct Answers: 80<br>
+                    Wrong Answers: 20</p>
+                    
+                    <p><strong>Calculation:</strong></p>
+                    <div class="calc-line">(80 × 1) − (20 × 0.25)</div>
+                    <div class="calc-line">= 80 − 5</div>
+                    <div class="calc-line"><strong>= 75 marks</strong></div>
+                </div>
+
+                <h2 id="point-two-five">0.25 Negative Marking Calculator</h2>
+                <p>In this marking system, 0.25 marks are deducted for each wrong answer when 1 mark is awarded for a correct response. This system is widely followed in SSC and Banking examinations.</p>
+                <p>The calculation method remains the same, using the standard negative marking formula.</p>
+
+                <h2 id="neet-calc">How to Calculate NEET Marks with Negative Marking</h2>
+                <p>The National Eligibility cum Entrance Test (NEET) follows a fixed negative marking scheme.</p>
+                <ul>
+                    <li>Correct Answer: +4 marks</li>
+                    <li>Wrong Answer: −1 mark</li>
+                    <li>Unattempted Question: 0 marks</li>
+                </ul>
+
+                <div class="calc-box formula-box">
+                    <div class="box-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="12" y1="6" x2="12.01" y2="6"/><line x1="16" y1="6" x2="16.01" y2="6"/><line x1="8" y1="6" x2="8.01" y2="6"/><line x1="12" y1="10" x2="12.01" y2="10"/><line x1="16" y1="10" x2="16.01" y2="10"/><line x1="8" y1="10" x2="8.01" y2="10"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="14" x2="8.01" y2="14"/></svg>
+                        Formula
+                    </div>
+                    <div class="calc-line">Total Score = (Total Correct × 4) − (Total Wrong × 1)</div>
+                </div>
+
+                <div class="calc-box example-box">
+                    <div class="box-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"></path></svg>
+                        Example
+                    </div>
+                    <p>A student attempts 150 questions out of 180.</p>
+                    <p>Correct Answers: 120<br>
+                    Wrong Answers: 30</p>
+                    
+                    <div class="calc-line">Step 1: Positive Marks -> 120 × 4 = 480</div>
+                    <div class="calc-line">Step 2: Negative Marks -> 30 × 1 = 30</div>
+                    <div class="calc-line"><strong>Step 3: Final Score -> 480 − 30 = 450 marks</strong></div>
+                </div>
+
+                <h2 id="upsc-calc">UPSC Negative Marking Calculation</h2>
+                <p>UPSC uses a 1/3 negative marking system. For every wrong answer, one-third of the marks assigned to the question are deducted. The final score is calculated using the same negative marking formula explained above.</p>
+
+                <h2 id="how-to-use">How to Use Our Negative Marking Calculator</h2>
+                <ol>
+                    <li>Select the mode between Simple Mode (same marking for all papers) and Pro Mode (subject-wise or tier-wise analysis).</li>
+                    <li>Enter the total number of attempted questions.</li>
+                    <li>Enter the total number of wrong attempts. The calculator will automatically calculate correct attempts.</li>
+                    <li>Input the marks per question.</li>
+                    <li>Fill in the penalty value according to your exam pattern.</li>
+                    <li>Click the Calculate button to get your total score and detailed result.</li>
+                </ol>
+
+                <h2 id="why-use">Why Use Our Negative Marking Calculator?</h2>
+                <ol>
+                    <li><strong>Quick and fast:</strong> get your analysis with the blink of an eye.</li>
+                    <li><strong>Accuracy:</strong> Unlike manual calculation, where Maths may be wrong due to negligence, an online tool is more reliable.</li>
+                    <li><strong>Detailed Result Box:</strong> We have a rich result box. You can analyse your preparation from various directions.</li>
+                    <li><strong>Device-friendly:</strong> Our tool is designed for all screen sizes.</li>
+                    <li><strong>Multi-Exam coverage:</strong> It uses a universal formula for mark calculation, which applies to all the exams.</li>
+                </ol>
+
+                <h2 id="faqs">FAQs</h2>
+                <div class="faq-wrapper">
+                    <div class="faq-item">
+                        <h3>What does 1/4 negative marking mean?</h3>
+                        <p>It means the penalty mark for each wrong answer will be 0.25 (one-fourth) of the mark assigned to each right answer.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What does 1/3 negative marking mean?</h3>
+                        <p>It means that for each wrong answer, penalty marks will be 0.33 (one third) of the marks awarded to each right answer.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What is a 0.5 negative marking calculation?</h3>
+                        <p>In this method, half (1/2) of the mark assigned to each right answer is deducted as penalty marks.</p>
+                    </div>
+                </div>
+
+                <h2 id="reduce-negative">How to Reduce Negative Marking</h2>
+                <ul>
+                    <li><strong>Focus on Accuracy, Not Attempts:</strong> Don't try to attempt all the question instead, rely on accuracy based on the mock test.</li>
+                    <li><strong>Use the Elimination Method:</strong> When you have a basic idea of the question but are not sure, try to eliminate at least 50% 0f the total options.</li>
+                    <li><strong>Avoid "Wild Guessing":</strong> Never mark a question based on gut feeling; if you don't have any idea, leave it.</li>
+                    <li><strong>Read the question twice:</strong> Look for miss keywords such as "NOT," "INCORRECT," or "EXCEPT" in the question.</li>
+                    <li><strong>Analyse Mock Tests:</strong> Before the exam, rigorously analyse your mocks and find strengths and weaknesses.</li>
+                </ul>
+
+                <h2 id="conclusion">Conclusion</h2>
+                <p>Negative marks in the exam are as important as your positive marks. One mark can break the bridge between your dream college and another drop year. By using our negative marking calculator, you can analyse your preparation and better prepare for the competitive exam.</p>
+
             </article>
 
         </div>
